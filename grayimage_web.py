@@ -1,8 +1,14 @@
 import streamlit as st
 from PIL import Image
 
+
+st.title("Color to Grayscale Converter")
+
+uploaded_image = st.file_uploader("Upload Image")
+
 with st.expander("Open lens"):
     camera_image = st.camera_input('Camera')
+
 
 if camera_image:
     img = Image.open(camera_image)
@@ -10,3 +16,8 @@ if camera_image:
     gray_img = img.convert("L")
 
     st.image(gray_img)
+
+if uploaded_image:
+    userimg =Image.open(uploaded_image)
+    gray_userimg = userimg.convert("L")
+    st.image(gray_userimg)

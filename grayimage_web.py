@@ -2,7 +2,7 @@ import streamlit as st
 from PIL import Image
 
 
-st.title("Color to Grayscale Converter")
+st.subheader("Color to Grayscale Converter")
 
 uploaded_image = st.file_uploader("Upload Image")
 
